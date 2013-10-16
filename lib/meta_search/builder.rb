@@ -148,7 +148,7 @@ module MetaSearch
       return nil unless method_name && where
       match = method_name.match("^(.*)_(#{where.name})=?$")
 
-      #return nil if match.nil?
+      return nil if match.nil?
 
       attribute, predicate = match.captures
       attributes = attribute.split(/_or_/)
